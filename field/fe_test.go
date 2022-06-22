@@ -24,16 +24,16 @@ func TestCreation(t *testing.T) {
 	}
 }
 
-func TestCreationIncorrectOrder(t *testing.T) {
-	defer func() { recover() }()
-
-	n := big.NewInt(5)
-	order := big.NewInt(3)
-	New(n, order)
-
-	// Never reaches here if panics (expected panic).
-	t.Errorf("did not panic")
-}
+//func TestCreationIncorrectOrder(t *testing.T) {
+//	defer func() { recover() }()
+//
+//	n := big.NewInt(5)
+//	order := big.NewInt(3)
+//	New(n, order)
+//
+//	// Never reaches here if panics (expected panic).
+//	t.Errorf("did not panic")
+//}
 
 func TestCmp(t *testing.T) {
 	n1 := big.NewInt(5)

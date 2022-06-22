@@ -10,12 +10,12 @@ type Element struct {
 	n     *big.Int
 }
 
-func New(num, field *big.Int) *Element {
-	if num.Cmp(field) >= 0 || num.Cmp(big.NewInt(0)) < 0 {
-		panic(fmt.Sprintf("n %d not in field range 0 to %d", num, field))
+func New(num, order *big.Int) *Element {
+	if num.Cmp(big.NewInt(0)) < 0 {
+		panic(fmt.Sprintf("n %d not in order range", num))
 	}
 
-	return &Element{n: num, order: field}
+	return &Element{n: new(big.Int).Mod(num, order), order: order}
 }
 
 func (fe *Element) GetNum() *big.Int {
