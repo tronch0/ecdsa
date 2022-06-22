@@ -17,10 +17,10 @@ type EcdsaCurve interface {
 }
 
 // Edward Curve - x² + y² = 1 − d ·x²·y²
-type EdwardsCurve interface {
-	GetA() *big.Int
-	GetD() *big.Int
-	GetP() *big.Int
-	GetN() *big.Int
-	GetG() *ed_point.Point
-}
+//type EdwardsCurve interface {
+//	GetA() *big.Int
+//	GetD() *big.Int
+//	GetP() *big.Int
+//	GetN() *big.Int
+//	GetG() *ed_point.Point
+//}
